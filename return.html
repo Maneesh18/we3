@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>Return multiple values</title>
+</head>
+<body>
+    <p>Enter length: </p><input type="number" id="1">
+    <p>Enter Breadth: </p><input type="number" id="2">
+    <input type="button" value="Submit" onclick="fan()">
+    <h3>Area is</h3><h3 id="3"></h3>
+    <h3>Perimeter is</h3><h3 id="4"></h3>
+    <script>
+        function red(a,b)
+        {
+            var x=a*b;
+            var x1=(Number(a)+Number(b));
+            console.log(x1);
+            x1=x1*2;
+            console.log(x1+" "+a+" "+b);
+            return [x,x1];
+        }
+        function fan(){
+        var x=red(document.getElementById("1").value,document.getElementById("2").value);
+        console.log(x);
+        document.getElementById("3").innerHTML=x[0];
+        document.getElementById("4").innerHTML=x[1];}
+        
+    </script>
+</body>
+</html>
